@@ -1,0 +1,134 @@
+/*------------------------
+ROOOT
+------------------------*/
+:root{
+    --primaryRgbColor:rgb(221, 0, 0);
+    --primaryColor:rgba(221, 0, 0, 1);
+    --secondary-color:#bc0000;
+    --section-heading-font-color:#bc0000;
+    --title-font-color:#161616;
+    --body-font-color:#161616;
+    --banner-font-color:#fff;
+    --shadowColor: 0px 2px 5px 2px rgba(var(--primaryRgbColor), 0.05);
+    --shadowHover: 2px 2px 5px 4px rgba(var(--primaryRgbColor), 0.1);
+    --border-radius: 5px;
+    --background-color-primary:#fff;
+    --background-color-dark:#161616;
+    --grid-gap:20px; 
+    --widget-pading:20px; 
+    --container-width:1160px;
+    --container-margin:20px;
+    --body-font-size:18px;
+    --body-font-line-height:26px;
+    --body-line-height:26px;
+    --primary-font:font-family: 'Poppins', sans-serif;
+}
+::-moz-selection { /* Code for Firefox */
+    color: #fff;
+    background: var(--primaryColor);
+  }
+  
+  ::selection {
+    color: #fff;
+    background: var(--primaryColor);
+  }
+body{background: #f3f1ff;}
+html,body,p,h1,h2,h3,h4,div,a,ul,ol,li,span, input, button{
+    padding: 0;
+    border: 0;
+    outline: 0;
+    margin: 0;
+   font-family: 'Poppins', sans-serif;
+}
+a{text-decoration: none;}
+p, input{color:#707070; font-size: var(--body-font-size); line-height:var(--body-line-height); font-family: var(--primary-font);}
+
+img{max-width: 100%;}
+hr{border-top: 1px solid #f1f1f1;}
+h1,h2,h3,h4,h5,h6{color: var(--title-font-color); 
+    font-family: var(--primary-font); font-weight: 800;}
+h1{font-size:70px; line-height: 90px;}
+h2{font-size:24px; line-height: 35px;}
+h3{font-size:20PX; line-height: 30px; }
+h4{font-size:18px; line-height: 30px; }
+h5{font-size:17px; line-height: 28px;}
+h6{font-size:16px; line-height: 25px;}
+/* main{} */
+/* -----------------
+LAYOUT 
+----------------- */
+.container{display: flex; flex-direction: column; align-items: center; box-sizing: border-box; margin: var(--container-margin);} 
+
+.row{width: var(--container-width); max-width:100%; background:var(--background-color-white);
+    
+}
+/* -----------------
+WIDGET 
+----------------- */
+.widget-wrapper{display: flex; width: 100%; flex-direction: column; }
+
+.widget{padding:var(--widget-pading);}
+.widget-img img{box-sizing: border-box;}
+.widget-info{display: flex; flex-direction: column;} 
+.widget-title h2{color: var(--section-heading-font-color);}
+.widget-title h4{color: var(--title-font-color);}
+/* .widget-content{} */
+.widget-description{line-height: var(--body-font-line-height); padding-top: 10px;}
+.widget-button{padding-top: 10px; display: block; color: var(--primaryColor);}
+.widget-button:hover{text-decoration: underline;}
+.widget-button span{color:#9F9F9F;}
+.box-shadow{border-radius: var(--border-radius);
+    box-shadow: var(--shadowColor);}
+.box-shadow:hover{box-shadow: var(--shadowHover);}
+.widget:hover .widget-title h4{color: var(--primaryColor);}
+
+/*------------------------
+SECITON : BUTTON
+------------------------*/
+.btn{border-radius: var(--border-radius); padding: 15px 30px; display: inline-block;}
+.btn-primary{background-color: var(--primaryColor); color: var(--banner-font-color);}
+.btn-primary:hover{background-color: var(--secondary-color);}
+/*------------------------
+SECITON : BANNER
+------------------------*/
+.banner{background-color: var(--background-color-dark); border-radius: 30px;}
+.banner-wrapper{display: grid;
+grid-template-columns: repeat(2, 1fr);
+padding:40px 60px; gap: var(--grid-gap);
+}
+.banner .widget-wrapper{justify-content: space-around;}
+.banner h1,.banner p{color:var(--banner-font-color) ;}
+.banner .widget-description{padding-bottom: 20px;;}
+.banner-img{}
+
+/*------------------------
+SECITON : PLAYER
+------------------------*/
+/* .top-players-wrapper{} */
+.players{ 
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr); 
+    grid-gap: var(--grid-gap);
+    padding-bottom: 30px;
+}
+.player{align-items: center; display: flex; gap:20px;}
+.player img{max-width:60px; }
+/*------------------------
+SECITON : TOP BLOG
+------------------------*/
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: var(--grid-gap);
+}
+.blog{display: flex; gap:20px;}
+.blog .widget-img img{max-width: 200px; box-shadow: 2px 2px 3px #ccc; box-sizing: border-box; border-radius: var(--border-radius);}
+
+/*------------------------
+SECITON : LATEST COURSES
+------------------------*/
+.latest-courses {margin-top: 30px;}
+.courses{display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: var(--grid-gap);
+}
