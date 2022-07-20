@@ -150,11 +150,23 @@ SECITON : SOCIALS
 ------------------------*/
 /* .social-container{min-height: 400px;} */
 .socials-grid ul {display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;}
-.socials-grid ul li a {font-size: 30px; color: var(--primaryColor); background-color: #fff;}
+.socials-grid ul li a {font-size: 45px; color: var(--primaryColor); background-color: #fff;}
 /* transition: property time effect */
-.socials-grid ul li a {padding: 10px; min-width: 60px; border: 1px solid #E8E8E8; text-align: center; display:block; border-radius: var(--border-radius);
+.socials-grid ul li a {padding: 20px;  border: 1px solid #E8E8E8;  display:flex; justify-content: center; align-items: center;
+    border-radius: var(--border-radius);
     transition:transform .3s ease-out; }
 /* transform: property time effect */
 .socials-grid ul li a:hover{background-color: var(--primaryColor);
     transform: scale(1.2); border-color: var(--primaryColor);}
 .socials-grid ul li a:hover .fa-brands{color: #fff; }
+
+
+/*------------------------
+PAGE : UPCOMING MATCH
+------------------------*/
+.uc-match-card{background-color: #fff; gap: var(--grid-gap);}
+.uc-match-img{display: grid; grid-template-columns: 1fr 30px 1fr;
+    justify-items: center;  align-items: center; justify-content: center;
+}
+.uc-match-img-left img, .uc-match-img-right img{width: 100%;}
+.uc-match-info{text-align: center; font-size: 16px;}
