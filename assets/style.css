@@ -150,9 +150,9 @@ SECITON : SOCIALS
 ------------------------*/
 /* .social-container{min-height: 400px;} */
 .socials-grid ul {display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;}
-.socials-grid ul li a {font-size: 45px; color: var(--primaryColor); background-color: #fff;}
+.socials-grid ul li a {font-size: 24px; color: var(--primaryColor); background-color: #fff;}
 /* transition: property time effect */
-.socials-grid ul li a {padding: 20px;  border: 1px solid #E8E8E8;  display:flex; justify-content: center; align-items: center;
+.socials-grid ul li a {padding: 10px;  border: 1px solid #E8E8E8;  display:flex; justify-content: center; align-items: center;
     border-radius: var(--border-radius);
     transition:transform .3s ease-out; }
 /* transform: property time effect */
