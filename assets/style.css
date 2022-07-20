@@ -160,7 +160,8 @@ SECITON : SOCIALS
     transform: scale(1.2); border-color: var(--primaryColor);}
 .socials-grid ul li a:hover .fa-brands{color: #fff; }
 
-
+.banner .btn{transition:transform .3s ease-out; }
+.banner .btn:hover{ transform: scale(1.1);}
 /*------------------------
 PAGE : UPCOMING MATCH
 ------------------------*/
