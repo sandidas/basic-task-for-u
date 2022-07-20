@@ -3,7 +3,7 @@
  * Text Domain: sandipandas.dev
  */
 /*------------------------
-ROOOT
+ROOT
 ------------------------*/
 :root{
     --primaryRgbColor:rgb(221, 0, 0);
@@ -20,7 +20,7 @@ ROOOT
     --background-color-dark:#161616;
     --grid-gap:20px; 
     --widget-pading:20px; 
-    --container-width:1160px;
+    --container-width:1240px;
     --container-margin:20px;
     --body-font-size:18px;
     --body-font-line-height:26px;
@@ -50,89 +50,111 @@ p, input{color:#707070; font-size: var(--body-font-size); line-height:var(--body
 img{max-width: 100%;}
 hr{border-top: 1px solid #f1f1f1;}
 h1,h2,h3,h4,h5,h6{color: var(--title-font-color); 
-    font-family: var(--primary-font); font-weight: 800;}
-h1{font-size:70px; line-height: 90px;}
+    font-family: var(--primary-font); }
+h1{font-size:70px; line-height: 90px;font-weight: 800;}
 h2{font-size:24px; line-height: 35px;}
-h3{font-size:20PX; line-height: 30px; }
+h3{font-size:18PX; line-height: 30px; font-weight: 500;}
 h4{font-size:18px; line-height: 30px; }
 h5{font-size:17px; line-height: 28px;}
 h6{font-size:16px; line-height: 25px;}
+ul, li{list-style: none; margin: 0; padding: 0;}
 /* main{} */
 /* -----------------
 LAYOUT 
 ----------------- */
 .container{display: flex; flex-direction: column; align-items: center; box-sizing: border-box; margin: var(--container-margin);} 
 
-.row{width: var(--container-width); max-width:100%; background:var(--background-color-white);
-    
-}
+.row{width: var(--container-width); max-width:100%; background:var(--background-color-white);}
 /* -----------------
 WIDGET 
 ----------------- */
-.widget-wrapper{display: flex; width: 100%; flex-direction: column; }
-
-.widget{padding:var(--widget-pading);}
-.widget-img img{box-sizing: border-box;}
-.widget-info{display: flex; flex-direction: column;} 
-.widget-title h2{color: var(--section-heading-font-color);}
-.widget-title h4{color: var(--title-font-color);}
-/* .widget-content{} */
-.widget-description{line-height: var(--body-font-line-height); padding-top: 10px;}
-.widget-button{padding-top: 10px; display: block; color: var(--primaryColor);}
-.widget-button:hover{text-decoration: underline;}
-.widget-button span{color:#9F9F9F;}
+.widget-wrapper{display: flex; width: 100%; flex-direction: column;}
+.widget{padding:var(--widget-pading); display: flex; flex-direction: column;}
+/* -----------------
+BOX SHADOW 
+----------------- */
 .box-shadow{border-radius: var(--border-radius);
     box-shadow: var(--shadowColor);}
 .box-shadow:hover{box-shadow: var(--shadowHover);}
-.widget:hover .widget-title h4{color: var(--primaryColor);}
+ 
 
 /*------------------------
 SECITON : BUTTON
 ------------------------*/
-.btn{border-radius: var(--border-radius); padding: 15px 30px; display: inline-block;}
+.btn{border-radius: var(--border-radius); padding: 15px 30px; display: inline-block; margin: 1px; font-weight: 600; text-align: center;}
 .btn-primary{background-color: var(--primaryColor); color: var(--banner-font-color);}
-.btn-primary:hover{background-color: var(--secondary-color);}
+.btn-primary:hover{background-color:#fff; color: #161616;}
+
+.btn-secondary{background-color:#fff; color: #161616;}
+.btn-secondary:hover{background-color: var(--primaryColor); color: var(--banner-font-color);}
 /*------------------------
 SECITON : BANNER
 ------------------------*/
 .banner{background-color: var(--background-color-dark); border-radius: 30px;}
-.banner-wrapper{display: grid;
-grid-template-columns: repeat(2, 1fr);
-padding:40px 60px; gap: var(--grid-gap);
-}
+.banner-wrapper{display: grid; grid-template-columns: repeat(2, 1fr); padding:40px 60px; gap: var(--grid-gap);}
 .banner .widget-wrapper{justify-content: space-around;}
-.banner h1,.banner p{color:var(--banner-font-color) ;}
-.banner .widget-description{padding-bottom: 20px;;}
-.banner-img{}
+.banner h1,.banner p{color:var(--banner-font-color);}
+.banner .widget-description{margin: 20px 0px;}
 
 /*------------------------
-SECITON : PLAYER
+SECITON : CONTENT BODY
 ------------------------*/
-/* .top-players-wrapper{} */
-.players{ 
+.nav-content{padding: 60px 0px;}
+.body-content-wrapper{
     display: grid;
-    grid-template-columns: repeat(3 , 1fr); 
-    grid-gap: var(--grid-gap);
-    padding-bottom: 30px;
+    grid-template-columns: 300px 1fr;
+    gap: var(--grid-gap);
 }
-.player{align-items: center; display: flex; gap:20px;}
-.player img{max-width:60px; }
+.body-content-wrapper .content-area{ min-height: 200px;}
+.body-content-wrapper aside ul{
+    padding: var(--grid-gap); background-color: #161616; border-radius: var(--border-radius);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+.body-content-wrapper aside ul li a.btn{display: block; margin: 10px 0px;} 
 /*------------------------
-SECITON : TOP BLOG
+SECITON : BLOGS
 ------------------------*/
-.blogs{
+.grid-card{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: var(--grid-gap);
 }
-.blog{display: flex; gap:20px;}
-.blog .widget-img img{max-width: 200px; box-shadow: 2px 2px 3px #ccc; box-sizing: border-box; border-radius: var(--border-radius);}
+.card-wrapper{display: flex; width: 100%; flex-direction: column;}
+.card{background-color:#fff; border: 1px solid #E8E8E8;}
+.card-img img{width: 100%;}
+.card-info{padding:var(--widget-pading); gap: 10px; display: flex; flex-wrap: wrap;}
+.card-info .btn{display: inline; border: 1px solid #161616; padding:7px 25px;}
+/* .card-title{} */
+.card-footer{display: flex; gap:var(--grid-gap); color: #161616;}
+/* .card-f-left{}
+.card-f-right{} */
+/*------------------------
+SECITON : VIEW ALL FOR PAD ONLY
+------------------------*/
+.view-all{
+    display: none;
+}
+/*------------------------
+SECITON : FOOTER
+------------------------*/
+footer{background-color: var(--background-color-dark); padding: 60px 0px;}
+.footer-title{text-align: center;color: #fff; font-size: 40px;}
+.footer-nav-grid ul {display: flex; gap: 20px; justify-content: center;
+    flex-wrap: wrap; padding: 20px 0px;}
+.footer-nav-grid ul li a{color: #fff; display: inline-block; padding: 10px 20px;}
+.footer-nav-grid ul li a:hover{color:var(--primaryColor);}
 
 /*------------------------
-SECITON : LATEST COURSES
+SECITON : SOCIALS
 ------------------------*/
-.latest-courses {margin-top: 30px;}
-.courses{display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-gap: var(--grid-gap);
-}
+/* .social-container{min-height: 400px;} */
+.socials-grid ul {display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;}
+.socials-grid ul li a {font-size: 30px; color: var(--primaryColor); background-color: #fff;}
+/* transition: property time effect */
+.socials-grid ul li a {padding: 10px; min-width: 60px; border: 1px solid #E8E8E8; text-align: center; display:block; border-radius: var(--border-radius);
+    transition:transform .3s ease-out; }
+/* transform: property time effect */
+.socials-grid ul li a:hover{background-color: var(--primaryColor);
+    transform: scale(1.2); border-color: var(--primaryColor);}
+.socials-grid ul li a:hover .fa-brands{color: #fff; }
