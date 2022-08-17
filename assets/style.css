@@ -81,7 +81,8 @@ BOX SHADOW
 /*------------------------
 SECITON : BUTTON
 ------------------------*/
-.btn{border-radius: var(--border-radius); padding: 15px 30px; display: inline-block; margin: 1px; font-weight: 600; text-align: center;}
+.btn{border-radius: var(--border-radius); padding: 15px 30px; display: inline-block; margin: 1px; font-weight: 600; text-align: center;
+}
 .btn-primary{background-color: var(--primaryColor); color: var(--banner-font-color);}
 .btn-primary:hover{background-color:#fff; color: #161616;}
 
